@@ -6,20 +6,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @layer reset, cards;
 
 @layer cards {
@@ -73,4 +59,37 @@
         place-content: center;
         block-size: 100svh;
     }
+}
+
+/* OPGAVE 1 */
+/* Kort uden billede: Overskriften (h3) skal være større */
+
+.card:not(:has(img)) h3 {
+    font-size: 1.5rem;
+}
+
+/* OPGAVE 2 */
+/* Kort, der hverken har et billede eller en overskrift (dvs. kort med kun paragraftekst) 
+Paragrafteksten (p) skal have justeret typografi:
+font-size: 1.25rem
+line-height: 1.4 */
+.card:not(:has(h3, img)) p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+/* OPGAVE 3 */
+/* Kort med billede: Billedet skal være full bleed (gå helt ud til kortets kanter).
+Kortets tekstindhold skal stadig flugte med den samme indvendige padding som de øvrige kort. */
+.card:has(img) {
+    padding: 0;
+}
+
+.card:has(img) .content {
+    padding: 1rem;
+}
+
+.card:has(img) img {
+    width: 100%;
+    display: block;
 }
