@@ -1,5 +1,12 @@
 .bento {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "title title image-1"
+        "image-2 list tag";
+
+
+
     gap: var(--spacing-base);
 
     .title {
@@ -19,6 +26,35 @@
         font-size: 2rem;
         line-height: 1.2;
     }
+
+    .title {
+        grid-area: title;
+    }
+
+    .image-1 {
+        grid-area: image-1;
+    }
+
+    .image-2 {
+        grid-area: image-2;
+    }
+
+    .list {
+        grid-area: list;
+    }
+
+    .tag {
+        grid-area: tag;
+    }
+
+}
+
+
+@media (width: 900px) {
+    .bento {
+        grid-template-columns: 1fr 1fr;
+
+    }
 }
 
 .card {
@@ -29,6 +65,8 @@
     &:not(:has(img)) {
         padding: var(--spacing-base);
     }
+
+    container-type: inline-size;
 }
 
 h2 {
