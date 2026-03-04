@@ -19,7 +19,7 @@ article {
     padding: 1rlh;
     max-inline-size: 1200px;
     margin-inline: auto;
-
+    container-type: inline-size;
     display: grid;
     gap: 1.5rlh;
 
@@ -31,9 +31,16 @@ article {
         font-size: .9rem;
         color: var(--body);
     }
+
+    @container article (width < 550px) {
+        /* fx centrér album-detaljer, fuldbredde knapper, negativ margin på .content */
+    }
 }
 
+
+
 header {
+    container: header / inline-size;
 
     img {
         aspect-ratio: 1;
