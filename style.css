@@ -190,3 +190,7 @@ button[data-theme-switcher] {
         scale: .98;
     }
 }
+
+img {
+    mask: linear-gradient(to bottom, red, 80%, #0000)
+}
