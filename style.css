@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-        "title title image-1"
-        "image-2 list tag";
-
-
+        "title title cup"
+        "man   list  cup"
+        "man   list  tag";
 
     gap: var(--spacing-base);
 
@@ -31,11 +30,11 @@
         grid-area: title;
     }
 
-    .image-1 {
+    .cup {
         grid-area: image-1;
     }
 
-    .image-2 {
+    .man {
         grid-area: image-2;
     }
 
@@ -48,6 +47,13 @@
     }
 
 }
+
+li {
+    color: white;
+    font-size: 30px;
+
+}
+
 
 
 @media (width: 900px) {
